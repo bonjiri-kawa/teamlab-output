@@ -1,72 +1,74 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# 作成したサービス内容  
+「プログラミング用のタイピングゲーム」
+覚えたいプログラミングの構文などを登録し、それを速く正確に打つことができたかを計るゲーム。
+点数が高ければ速く、性格に打つことができた事になる。
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## 〜なぜこのサービスをつくったか〜  
+プログラミングを勉強していくなかで感じたことに、タイピングの速さや、思いついた基本的な構文を瞬時に書くことができると、勉強がより
+効率的になるということ。そこで、自分が曖昧だと思う構文を自分で登録し、練習できるようになれば、プログラミング初心者の勉強がより捗る
+のではないかと考えたため。
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 使用しているフレームワーク  
+Laravel 5.8.37
+Vue.js 2.5.17
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+#環境構築
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+composerをダウンロード
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+composer global require laravel/installer
+```
+ダウンロードしたcomposerを「user/local/bin」に移動させる
+```$xslt
+sudo mv composer.phar /usr/local/bin/composer
+```
+配置したcomposerのパーミッションを変更
+```$xslt
+chmod a+x /usr/local/bin/composer
+```
+Laravelをインストールする
+```$xslt
+composer global require laravel/installer
+```
+環境変数PATHを設定
+```$xslt
+echo "export PATH=\$PATH:\$HOME/.composer/vendor/bin" >> ~/.bash_profile
+```
+そのPATHをsourceコマンドで有効にする
+```$xslt
+source ~./bash_profile
+```
+Laravelを使ってプロジェクトを作成
+```$xslt
+composer create-project "laravel/laravel" --prefer-dist プロジェクト名
+```
+作ったプロジェクトに移動し、laravelのバージョンを確認
+```$xslt
+php artisan --version
+```
+ここで
+```$xslt
+Laravel Framework 5.8.35
+```
+などの、バージョンが出れば使用できる
 
-## Laravel Sponsors
+そして、Vue.jsを使いたい時は、コマンドラインで
+```$xslt
+npm install
+```
+を行えば使用できる。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 実装した機能
+ユーザー登録機能  
+ログイン機能  
+ログアウト機能  
+問題登録機能  
+問題編集機能  
+問題一覧表示機能  
+問題削除機能  
+問題練習機能  
+マイページ  
