@@ -1868,6 +1868,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['title', 'drill', 'category_name'],
@@ -1895,6 +1898,7 @@ __webpack_require__.r(__webpack_exports__);
     problemText: function problemText() {
       return this.drill['problem' + this.currentProblemNum];
     },
+    //問題を配列に
     problemWords: function problemWords() {
       return Array.from(this.drill['problem' + this.currentProblemNum]);
     },
@@ -1938,7 +1942,7 @@ __webpack_require__.r(__webpack_exports__);
     countDown: function countDown() {
       var _this = this;
 
-      var countSound = new Audio('../sounds/Countdown01-5.mp3');
+      var countSound = new Audio('../sounds/cursor2.mp3');
       var startSound = new Audio('../sounds/Countdown01-6.mp3');
       this.isCountDown = true;
       this.soundPlay(countSound);
@@ -2006,7 +2010,7 @@ __webpack_require__.r(__webpack_exports__);
     countTimer: function countTimer() {
       var _this3 = this;
 
-      var endSound = new Audio('../sounds/going-played2.mp3');
+      var endSound = new Audio('../sounds/gong-played2.mp3');
       var timer = window.setInterval(function () {
         _this3.timerNum -= 1;
 
@@ -37452,17 +37456,26 @@ var render = function() {
               _vm._v(" "),
               _vm.isStarted && !_vm.isCountDown && !_vm.isEnd
                 ? [
-                    _c("p", [_vm._v(_vm._s(_vm.timerNum))]),
+                    _c("p", { staticStyle: { "font-size": "50px" } }, [
+                      _vm._v(_vm._s(_vm.timerNum))
+                    ]),
                     _vm._v(" "),
-                    _vm._l(_vm.problemWords, function(word, index) {
-                      return _c(
-                        "span",
-                        {
-                          class: { "text-primary": index < _vm.currentWordNum }
-                        },
-                        [_vm._v(_vm._s(word))]
-                      )
-                    })
+                    _c(
+                      "p",
+                      { staticStyle: { "font-size": "80px" } },
+                      _vm._l(_vm.problemWords, function(word, index) {
+                        return _c(
+                          "span",
+                          {
+                            class: {
+                              "text-primary": index < _vm.currentWordNum
+                            }
+                          },
+                          [_vm._v(_vm._s(word))]
+                        )
+                      }),
+                      0
+                    )
                   ]
                 : _vm._e(),
               _vm._v(" "),

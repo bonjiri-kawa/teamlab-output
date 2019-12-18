@@ -172,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576142284548</updated>
-      <workItem from="1576142286328" duration="56177000" />
+      <workItem from="1576142286328" duration="64813000" />
     </task>
     <servers />
   </component>
@@ -180,6 +180,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="401" y="246" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576684497003">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="401" y="246" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.828@0.23.1440.828" timestamp="1576684497003" />
     <state x="104" y="75" width="1234" height="627" key="DiffContextDialog" timestamp="1576408005684">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
@@ -194,10 +198,11 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="707" height="445" key="SwitcherDM/0.23.1440.827@0.23.1440.827" timestamp="1576397956514" />
-    <state x="385" y="174" width="670" height="676" key="search.everywhere.popup" timestamp="1576596576636">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="385" y="174" width="670" height="677" key="search.everywhere.popup" timestamp="1576684456216">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="385" y="174" width="670" height="676" key="search.everywhere.popup/0.23.1440.826@0.23.1440.826" timestamp="1576589125904" />
     <state x="385" y="174" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1576596576636" />
+    <state x="385" y="174" width="670" height="677" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1576684456216" />
   </component>
 </project>

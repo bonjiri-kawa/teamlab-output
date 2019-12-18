@@ -12,8 +12,11 @@
                         <p v-if="isCountDown" style="font-size: 100px;">{{ countDownNum }}</p>
 
                         <template v-if="isStarted && !isCountDown && !isEnd">
-                            <p>{{ timerNum }}</p>
-                            <span v-for="(word, index) in problemWords" :class="{'text-primary': index < currentWordNum}">{{ word }}</span>
+                            <p style="font-size:50px;">{{ timerNum }}</p>
+                            <p style="font-size: 80px;">
+                                <span v-for="(word, index) in problemWords" :class="{'text-primary': index < currentWordNum}">{{ word }}</span>
+                            </p>
+
                         </template>
 
                         <template v-if="isEnd">
@@ -49,6 +52,7 @@
             problemText: function(){
                 return this.drill['problem' + this.currentProblemNum]
             },
+            //問題を配列に
             problemWords: function(){
                 return Array.from(this.drill['problem' + this.currentProblemNum])
             },
@@ -91,7 +95,7 @@
                 this.countDown()
             },
             countDown: function(){
-                const countSound = new Audio('../sounds/Countdown01-5.mp3')
+                const countSound = new Audio('../sounds/cursor2.mp3')
                 const startSound = new Audio('../sounds/Countdown01-6.mp3')
 
                 this.isCountDown = true
@@ -155,7 +159,7 @@
                 sound.play()
             },
             countTimer: function(){
-                const endSound = new Audio('../sounds/going-played2.mp3')
+                const endSound = new Audio('../sounds/gong-played2.mp3')
                 let timer = window.setInterval(() => {
                     this.timerNum -= 1
 
