@@ -20,10 +20,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app" class="drill">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm drill__nav--bar">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('drills') }}">
+                <a class="navbar-brand drill__nav--bar__title" href="{{ url('drills') }}">
 {{--                    {{ config('app.name', 'Typing Enjoy') }}--}}
                     Enjoy Typing
                 </a>

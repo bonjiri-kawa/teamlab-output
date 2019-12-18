@@ -3,5 +3,12 @@
     "Title": "タイトル",
     "Category": "カテゴリー",
     "Problem": "問題",
-    "Register": "登録する"
+    "Register": "登録する",
+    "Drill List": "練習一覧",
+    "Go Create": "問題登録！",
+    "Go Practice": "練習へ",
+    "Go Edit": "問題編集",
+    "Go Delete": "問題削除",
+    "Back": "戻る",
+    "Practice": "練習"
 }

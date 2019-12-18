@@ -12,8 +12,8 @@
                         <p v-if="isCountDown" style="font-size: 100px;">{{ countDownNum }}</p>
 
                         <template v-if="isStarted && !isCountDown && !isEnd">
-                            <p style="font-size:50px;">{{ timerNum }}</p>
-                            <p style="font-size: 80px;">
+                            <p style="font-size:40px;">{{ timerNum }}</p>
+                            <p style="font-size: 60px;">
                                 <span v-for="(word, index) in problemWords" :class="{'text-primary': index < currentWordNum}">{{ word }}</span>
                             </p>
 

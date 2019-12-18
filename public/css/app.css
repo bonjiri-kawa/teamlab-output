@@ -11356,3 +11356,33 @@ a.text-dark:focus {
   }
 }
 
+.drill__nav--bar {
+  background: #fcf8e3;
+}
+
+.drill__nav--bar__title {
+  font-family: "Gill Sans", sans-serif;
+}
+
+.problem__create--btn {
+  background: #28a745;
+  color: #fcf8e3;
+}
+
+.problem__practice--btn {
+  background: powderblue;
+}
+
+.problem__edit--btn {
+  background: #ffa500;
+}
+
+.problem__delete--btn {
+  background: #ff6666;
+}
+
+.problem__body {
+  background: #fcf8e3;
+  border-radius: 0.3rem;
+}
+

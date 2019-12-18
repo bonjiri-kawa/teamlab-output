@@ -37456,13 +37456,13 @@ var render = function() {
               _vm._v(" "),
               _vm.isStarted && !_vm.isCountDown && !_vm.isEnd
                 ? [
-                    _c("p", { staticStyle: { "font-size": "50px" } }, [
+                    _c("p", { staticStyle: { "font-size": "40px" } }, [
                       _vm._v(_vm._s(_vm.timerNum))
                     ]),
                     _vm._v(" "),
                     _c(
                       "p",
-                      { staticStyle: { "font-size": "80px" } },
+                      { staticStyle: { "font-size": "60px" } },
                       _vm._l(_vm.problemWords, function(word, index) {
                         return _c(
                           "span",

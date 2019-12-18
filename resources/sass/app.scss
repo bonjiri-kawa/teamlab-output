@@ -6,3 +6,32 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+.drill{
+    &__nav--bar{
+        background: #fcf8e3;
+        &__title{
+            font-family: "Gill Sans", sans-serif;
+        }
+    }
+}
+.problem{
+    &__create--btn{
+        background: #28a745;
+        color: #fcf8e3;
+    }
+    &__practice--btn{
+        background: powderblue;
+    }
+    &__edit--btn{
+        background: #ffa500;
+    }
+    &__delete--btn{
+        background: #ff6666;
+    }
+    &__body{
+        background: #fcf8e3;
+        border-radius: 0.3rem;
+    }
+}
