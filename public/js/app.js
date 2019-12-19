@@ -37456,13 +37456,13 @@ var render = function() {
               _vm._v(" "),
               _vm.isStarted && !_vm.isCountDown && !_vm.isEnd
                 ? [
-                    _c("p", { staticStyle: { "font-size": "40px" } }, [
+                    _c("p", { staticStyle: { "font-size": "30px" } }, [
                       _vm._v(_vm._s(_vm.timerNum))
                     ]),
                     _vm._v(" "),
                     _c(
                       "p",
-                      { staticStyle: { "font-size": "60px" } },
+                      { staticStyle: { "font-size": "20px" } },
                       _vm._l(_vm.problemWords, function(word, index) {
                         return _c(
                           "span",
@@ -49907,7 +49907,8 @@ __webpack_require__.r(__webpack_exports__);
   ")": 41,
   "\\": 92,
   "+": 43,
-  "_": 95
+  "_": 95,
+  " ": 32
 });
 
 /***/ }),

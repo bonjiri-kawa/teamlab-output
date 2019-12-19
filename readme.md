@@ -35,14 +35,31 @@ https://qiita.com/kuro-wassan/items/1cb32995acc07a4b4cc6
   
 Laravelプロジェクトの作成方法は下記を参考↓  
 https://readouble.com/laravel/5.8/ja/installation.html  
-
-②ターミナルで、先ほど作ったLaravelプロジェクトのディレクトリに移動  
+  
+②ターミナルで、先ほど作ったLaravelプロジェクトのディレクトリに移動し  
 ```$xslt
 php artisan serve
 ```
+を実行。  
+  
+その後、ターミナルに
+```$xslt
+http://127.0.0.1:8000
+```
+と表示されるため、ブラウザでそのURLを入力。すると、laravelで作成したアプリがブラウザに現れる。  
+  
+③加えてVueを使えるようにするために、ターミナルにて、作成したプロフェクトのディレクトリ上で
+```$xslt
+npm install
+```
+を実行。  
 
-を実行。
-
-そうすればこのアプリを使うことができる。
+④npm installが成功したら、Vueを反映させるために、ターミナルで（ディレクトリはそのまま）  
+```$xslt
+npm run dev
+```
+も実行。
+  
+①〜④が成功すればこのアプリを使うことができる。
 
 
