@@ -16,9 +16,7 @@ class DrillController extends Controller
      */
     public function index()
     {
-        //$drills = Drill::all();
-//        $drills = Drill::paginate(6);
-//        return view('drills.index', compact('drills'));
+        //drillsから問題を表示
         $drills = Auth::user()->drills()->paginate(6);
         return view('drills.index', compact('drills'));
     }
@@ -30,6 +28,7 @@ class DrillController extends Controller
      */
     public function create()
     {
+        //new.blade.phpを表示
         return view('drills.new');
     }
 
@@ -41,24 +40,12 @@ class DrillController extends Controller
      */
     public function store(DrillList $request)
     {
-//        $request->validate([
-//            'title' => 'required|string|max:255|',
-//            'category_name' => 'required|string|max:255',
-//            'problem0' => 'required|string|max:255',
-//            'problem1' => 'string|nullable|max:255',
-//            'problem2' => 'string|nullable|max:255',
-//            'problem3' => 'string|nullable|max:255',
-//            'problem4' => 'string|nullable|max:255',
-//            'problem5' => 'string|nullable|max:255',
-//            'problem6' => 'string|nullable|max:255',
-//            'problem7' => 'string|nullable|max:255',
-//            'problem8' => 'string|nullable|max:255',
-//            'problem9' => 'string|nullable|max:255',
-//        ]);
+        //フォームリクエストでバリデーション
         $request->Validated();
 
         $drill = new Drill;
-        //$drill->fill($request->all())->save();
+
+        //drillをDBに保存
         Auth::user()->drills()->save($drill->fill($request->all()));
 
         return redirect('/drills')->with('flash_message', __('Registered.'));
@@ -75,7 +62,7 @@ class DrillController extends Controller
         if(!ctype_digit($id)){
             return redirect('/drills/create')->with('flash_message', __('Invalid operation was performed'));
         }
-
+        //練習画面表示
         $drill = Drill::find($id);
         return view('drills.show', compact('drill'));
     }
@@ -92,7 +79,7 @@ class DrillController extends Controller
             return redirect('/drills/create')->with('flash_message', __('Invalid operation was performed'));
         }
 
-        //$drill = Drill::find($id);
+        //編集画面表示
         $drill = Auth::user()->drills()->find($id);
         return view('drills.edit', compact('drill'));
     }
@@ -104,28 +91,17 @@ class DrillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(DrillList $request, $id)
     {
         if(!ctype_digit($id)) {
             return redirect('/drills/create')->with('flash_message', __('Invalid operation was performed'));
         }
 
-        $request->validate([
-            'title' => 'required|string|max:255|',
-            'category_name' => 'required|string|max:255',
-            'problem0' => 'required|string|max:255',
-            'problem1' => 'string|nullable|max:255',
-            'problem2' => 'string|nullable|max:255',
-            'problem3' => 'string|nullable|max:255',
-            'problem4' => 'string|nullable|max:255',
-            'problem5' => 'string|nullable|max:255',
-            'problem6' => 'string|nullable|max:255',
-            'problem7' => 'string|nullable|max:255',
-            'problem8' => 'string|nullable|max:255',
-            'problem9' => 'string|nullable|max:255',
-        ]);
+        //フォームリクエストでバリデーション
+        $request->Validated();
 
         $drill = Drill::find($id);
+        //編集内容登録
         $drill->fill($request->all())->save();
 
         return redirect('/drills')->with('flash_message', __('Registered.'));
@@ -143,7 +119,7 @@ class DrillController extends Controller
             return redirect('/drills/create')->with('flash_message', __('Invalid operation was performed'));
         }
 
-        //Drill::find($id)->delete();
+        //削除
         Auth::user()->drills()->find($id)->delete();
         return redirect('/drills')->with('flash_message', __('Deleted.'));
     }

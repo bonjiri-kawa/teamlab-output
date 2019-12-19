@@ -52,10 +52,11 @@
             problemText: function(){
                 return this.drill['problem' + this.currentProblemNum]
             },
-            //問題を配列に
+            //問題を配列に変換
             problemWords: function(){
                 return Array.from(this.drill['problem' + this.currentProblemNum])
             },
+            //問題のキーコードを配列に変換
             problemKeyCodes: function(){
                 if(!Array.from(this.drill['problem' + this.currentProblemNum]).length){
                     return null
@@ -77,7 +78,7 @@
                 console.log(problemKeyCodes)
                 return problemKeyCodes
             },
-            //問題の文字数
+            //回答中の問題の長さ
             totalWordNum: function(){
                 return this.problemKeyCodes.length
             },
@@ -90,10 +91,12 @@
             }
         },
         methods: {
+            //カウントダウン開始
             doDrill: function(){
                 this.isStarted = true
                 this.countDown()
             },
+            //カウントダウン
             countDown: function(){
                 const countSound = new Audio('../sounds/cursor2.mp3')
                 const startSound = new Audio('../sounds/Countdown01-6.mp3')

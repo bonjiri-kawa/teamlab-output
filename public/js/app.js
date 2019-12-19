@@ -1898,10 +1898,11 @@ __webpack_require__.r(__webpack_exports__);
     problemText: function problemText() {
       return this.drill['problem' + this.currentProblemNum];
     },
-    //問題を配列に
+    //問題を配列に変換
     problemWords: function problemWords() {
       return Array.from(this.drill['problem' + this.currentProblemNum]);
     },
+    //問題のキーコードを配列に変換
     problemKeyCodes: function problemKeyCodes() {
       if (!Array.from(this.drill['problem' + this.currentProblemNum]).length) {
         return null;
@@ -1922,7 +1923,7 @@ __webpack_require__.r(__webpack_exports__);
       console.log(problemKeyCodes);
       return problemKeyCodes;
     },
-    //問題の文字数
+    //回答中の問題の長さ
     totalWordNum: function totalWordNum() {
       return this.problemKeyCodes.length;
     },
@@ -1935,10 +1936,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    //カウントダウン開始
     doDrill: function doDrill() {
       this.isStarted = true;
       this.countDown();
     },
+    //カウントダウン
     countDown: function countDown() {
       var _this = this;
 

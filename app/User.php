@@ -37,6 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //Drills.phpとのリレーションを張る。
     public function drills()
     {
         return $this->hasMany('App\Drill');
