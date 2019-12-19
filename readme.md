@@ -36,7 +36,7 @@ https://qiita.com/kuro-wassan/items/1cb32995acc07a4b4cc6
 Laravelプロジェクトの作成方法は下記を参考↓  
 https://readouble.com/laravel/5.8/ja/installation.html  
   
-②ターミナルで、先ほど作ったLaravelプロジェクトのディレクトリに移動し  
+②ターミナルにて、先ほど作ったLaravelプロジェクトのディレクトリに移動し  
 ```$xslt
 php artisan serve
 ```
